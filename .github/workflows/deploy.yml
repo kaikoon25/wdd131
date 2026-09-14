@@ -30,7 +30,7 @@ jobs:
       - name: Upload Folder Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'wdd131'
+          path: 'Fall2026/wdd131'
 
       - name: Deploy to GitHub Pages
         id: deployment
