@@ -2,8 +2,8 @@ name: Deploy wdd131 Subfolder to Pages
 
 on:
   push:
-    branches: ["main", "master"] # Runs whenever you push code to main or master
-  workflow_dispatch: # Allows you to run this manually if needed
+    branches: ["main", "master"]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -18,7 +18,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps:deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -30,7 +30,7 @@ jobs:
       - name: Upload Folder Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'wdd131' # <--- This tells GitHub to only publish your wdd131 folder!
+          path: 'wdd131'
 
       - name: Deploy to GitHub Pages
         id: deployment
