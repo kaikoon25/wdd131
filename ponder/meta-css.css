@@ -43,3 +43,9 @@ img {
 .list {
     list-style-type: none;
 }
+
+/*For DOM ponder*/
+.background {
+    background-color: #000;
+    color: white;
+}

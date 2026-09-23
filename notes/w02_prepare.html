@@ -33,7 +33,7 @@ Each element in the html becomes a node in the DOM that JavaScript can then inte
 Such as "document.querySelector("h1").textContent = "Hello World!";" Which finds the h1 element and changes its text
 -->
 
-<p>Select elements of html in Javascript by making variable then with such as shown above.</p> 
+<p>Select elements of HTML in JavaScript by making variable then with such as shown above.</p> 
 <!--
     const title = document.getElementById("title");
     const message = document.querySelector(".message");
@@ -162,5 +162,50 @@ Like python, the first item starts at 0. For example Saab is at index 0
 To show the value in the second position, use cars[1]; console.log(cars[1]);
 
 .forEach() runs a function for every item in the array, or sends one item to the function and it runs for each item
-.map()
+.map() does what .forEach does, and creates a new array out of each output
+.filter() creates a new array but filters out any values if they do not meet a specified condition
+.reduce() acummulates the values put through the function to return a single result. This has two parameters you want in the function to put into the function's (), one for the accumulated result and one for the current value
 -->
+<p>Conditionals</p>
+<!-- 
+Decesion makers of JavaScript code. Allow control of what happens based on specific conditions. 
+
+Operators: < > >= <= == is what you expect
+=== equal value and type
+!== not equal value or type
+&& AND (both conditions must be true)
+|| OR (either condition can be true)
+! NOT (inverts the condition)
+
+if statement are here
+
+Switch statement: preforms the same as if statements but cleaner and simpler
+
+After the switch keyword, you specify the variable to evaluate (day).
+Each case represents a possible value.
+The code following the colon : runs if the value matches the case.
+
+let day = "Monday";
+    switch (day) {
+        case "Monday":
+        console.log("Start of the workweek!");
+        break;
+    case "Friday":
+        console.log("Weekend is near!");
+        break;
+        case "Saturday":
+    case "Sunday":
+        console.log("It's the weekend!");
+        break;
+    default:
+        console.log("Just another day.");
+        }
+
+Notice the break statements inside each case.
+Unlike if...else if...else statements, switch will keep checking all cases even after finding
+a match—unless you include break
+
+if...else if...else → For handling complex conditions and ranges.
+ switch → For cleaner code when comparing a single value to multiple cases.
+-->
+ <!-- Just realized im ahead lol... -->
