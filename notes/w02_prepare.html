@@ -1,0 +1,166 @@
+<!-- 
+(first week was written physically)
+-->
+<p>AI interaction notes</p>
+<!--
+Document Object Model is a programming representation of a web page that allows JavaScript to access, modify, add, or remove elements on the page.
+Javascript uses the DOM to manipulate the page.
+The document object in JavaScript represents the DOM of the currently loaded web page.
+
+When a browser loads HTML, it converts the HTML into a tree-like structure of objects called the DOM.
+
+For example this html
+-->
+<html>
+  <body>
+    <h1>Hello</h1>
+    <p>Welcome to my website.</p>
+  </body>
+</html>
+<!-- 
+Looks like this in the DOM
+Document
+└── html
+    └── body
+        ├── h1
+        │   └── "Hello"
+        └── p
+            └── "Welcome to my website."
+
+-->
+<!-- 
+Each element in the html becomes a node in the DOM that JavaScript can then interact with.
+Such as "document.querySelector("h1").textContent = "Hello World!";" Which finds the h1 element and changes its text
+-->
+
+<p>Select elements of html in Javascript by making variable then with such as shown above.</p> 
+<!--
+    const title = document.getElementById("title");
+    const message = document.querySelector(".message");
+    for the html
+    <h1 id="title">Hello</h1>
+    <p class="message">Welcome!</p>
+
+    Or select multiple elements like
+    const paragraphs = document.querySelectorAll("p");
+-->
+<p>Then after you make the variables as such, you can change the content like</p>
+<!--
+    title.textContent = "Hello, JavaScript!";
+    message.innerHTML = "<strong>Welcome!</strong>";
+
+    textContent when you're inserting plain text, especially if the text comes from a user
+-->
+<p>You can use javascript to change styles to like</p>
+<!--
+    title.style.color = "blue";
+    title.style.fontSize = "32px";
+    .highlight {
+    color: blue;
+    font-weight: bold;
+    }
+    title.classList.add("highlight");
+    title.classList.remove("highlight");
+    title.classList.toggle("highlight");
+
+    All as examples.
+-->
+<p>You can use javascript to change attributes as well like</p>
+<!--
+    (HTML)
+    <img id="photo" src="old.jpg" alt="Old photo">
+
+    (Script)
+    const photo = document.querySelector("#photo");
+    photo.src = "new.jpg";
+    photo.alt = "New photo";
+    or 
+    photo.setAttribute("src", "new.jpg");
+-->
+<p>And you can create and remove elements as well such as</p>
+<!--
+    const div = document.createElement("div");
+    div.textContent = "Hello, world!";
+    div.className = "message";
+    document.body.appendChild(div);
+
+    Which creates <div class="message">Hello, world!</div>
+    Adding to a location:
+    const parent = document.querySelector("#container");
+    parent.appendChild(div);
+    or
+    parent.prepend(div);       // Beginning
+    parent.append(div);        // End
+    parent.before(div);        // Before parent
+    parent.after(div);         // After parent
+
+    Removing:
+    const element = document.querySelector(".message");
+    element.remove();
+-->
+<p>Of course I can also code elements to "do" things</p>
+
+<hr>
+
+<p>VIDEOS NOTES</p>
+ <!-- 
+refrence the seperate js file in the html fie with <script src="script.js" defer></script>
+
+Adding defer to the script makes sure the html fully loads before the js runs, preventing errors.
+ -->
+<p>Selecting elements</p>
+<!-- 
+- querySelector() selects the first element that matches the specified css selector
+exmpl inside (): ("#myIdName")
+
+- querySelectorAll selectas all elments that match the specified css selector and returns a node list instead of just a single element
+exmpl inside (): (".myClassName")
+
+- getElementById(): Selects the first element with the specified ID atribute
+exmpl inside (): ("myIdName")
+
+- getElementByClassName() selects all elements with the specified class name and returns multiple elements
+exmpl inside (): ("myClassName")
+
+- getElementByTagName(): selects all elements with a specific tag like div p etc and can return multiple elements
+-->
+<p>Content Properties</p>
+<!-- 
+- .innerHTML sets or gets the html content inside of an element
+- .innerText sets or gets the visible text inside of an element
+- .textContent simmilar to innerText but includes any hidden elements
+- .value is used with form input or text area elements to set or get the input values
+-->
+<p>Style Properties</p>
+<!-- 
+- .style used to change font color, background color, etc
+- .className to change how they are styled which replaces any existing classes
+- .add(), .remove(), .toggle() is more flexible way to work with classes (classList)
+-->
+<p>Create and Remove</p>
+<!-- 
+- .createElement() then add content to it for example with .textContent
+- .appendChild() to add it to the HTML 
+- .remove() can then remove the new element
+-->
+<p>Attributes</p>
+<!-- 
+- setAttribute() to add attributes inside and element
+- .getAttribute() would return the attribute that is currently in that element
+- .removeAttribute() removes selected attribute from element
+-->
+
+<hr>
+
+<p>Additional Notes</p>
+<p>Arrays</p>
+<!-- 
+An array is a special type of variable that can hold multiple values. So, if you had several related values—like all the courses you are taking this semester—you don’t need to create a separate variable to hold each one. Instead, you can store them in an array.
+let courses = ['CSE111', 'WDD131', 'ITM220'];
+const cars = ["Saab", "Volvo", "BMW"];
+Like python, the first item starts at 0. For example Saab is at index 0
+To show the value in the second position, use cars[1]; console.log(cars[1]);
+
+.forEach() runs a function for every item in the array, or sends one item to the function and it runs for each item
+.map()
+-->
