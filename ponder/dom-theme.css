@@ -1,0 +1,33 @@
+
+body {
+    /*background-size: 100vw 100vh; will mess with the aspect ratio*/
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    transition: background-image 1s ease;
+    /*Whenever background images is transitioned/changed, take 1 second to ease that transition*/
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    /*rem: root. _ as big as 16 pixels always. Just em is whatever the font size is set to. For example if I set font size in body to 20px em would say _ as big as 20px.*/
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+select {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+#logo {
+    margin-top: 1rem;
+    width: 300px;
+}
+
+.content {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+          
