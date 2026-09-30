@@ -28,5 +28,4 @@ function changeTheme() {
         h2.style.color = '#035f9c'
         logo.setAttribute('src', 'byui-logo-blue.png')
     }
-}        
-// document.content.style.border = ('1px, solid, lightgray')            
+}            
