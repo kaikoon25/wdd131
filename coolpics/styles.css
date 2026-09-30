@@ -1,0 +1,105 @@
+/* Mobile first design */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", sans-serif;
+}
+header {
+    background-color: #3d66ce;
+    color: white;
+    padding-top: 0.1px;
+}
+/* I wanted the menu button to be aligned to the left since it is an icon and not text. */
+main {
+    text-align: center;
+    padding-top: 0.1px;
+    background-color: #BDC0C0;
+    padding-bottom: 15px;
+}
+footer {
+    text-align: center;
+    background-color: #3d66ce;
+    color: white;
+    padding-top: 0.1px;
+    padding-bottom: 0.1px;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav {
+    padding-bottom: 20px;
+}
+nav a {
+    padding: 20px;
+    color: white;
+    display: none;
+}
+nav a:hover {
+    text-decoration: none;
+    color: #b3d7e0;
+}
+.menu-btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: rgb(11, 6, 65);
+    margin: 5px 0;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 40px;
+    /* justify-content: center; */
+    /* Dosent work because display grid will not work for it. So below I do margin left and right auto. */
+    padding-left: 40px;
+    padding-right: 40px;
+}
+img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+
+    padding: 5px;
+    background-color: white;
+    border: 1px solid rgb(122, 122, 122);
+    box-shadow: 5px 5px 10px 0px rgb(62, 62, 62);
+    /* margin: 12px, auto, 12px, auto; */
+    /* top, right, bottom, then left */
+    /* For some reason did not work. */
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* I did 750 and 1110 px due to the nice right side padding being cut off between 700 and 750px and 1000 and 1110px. */
+@media screen and (min-width: 750px) {
+    section {
+        grid-template-columns: 1fr 1fr;
+    }
+    .menu-btn {
+        display: none;
+    }
+    nav a {
+        display: inline;
+    }
+    nav {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    section {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
