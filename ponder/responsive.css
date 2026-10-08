@@ -83,8 +83,13 @@ footer {
     .menu-btn {
         display: none;
     }
+    .hide {
+        display: block;
+    }
     nav a {
         display: inline;
+        border: none;
+        text-decoration: underline;
     }
     nav {
         text-align: right;
