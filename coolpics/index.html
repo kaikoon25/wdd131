@@ -8,6 +8,7 @@
     <title>Cool Pics</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -18,7 +19,7 @@
             <div class="bar2"></div>
             <div class="bar3"></div>
         </button>
-        <nav>
+        <nav class="hide">
             <a href="#">Home</a>
             <a href="#">People</a>
             <a href="#">Places</a>
@@ -29,19 +30,24 @@
 
     <main>
         <h2>Current Work</h2>
-        <section>
+        <section class="gallery">
             <!-- Nine images needed. I am adding two of my own images for fun. -->
             <img src="images/norris-sm.jpg" alt="cool pic">
-            <img src="images/111.jpg" alt="cool pic">
-            <img src="images/222.jpg" alt="cool pic">
+            <img src="images/111-sm.jpg" alt="cool pic">
+            <img src="images/222-sm.jpg" alt="cool pic">
             <img src="images/norris-sm.jpg" alt="cool pic">
-            <img src="images/111.jpg" alt="cool pic">
-            <img src="images/222.jpg" alt="cool pic">
+            <img src="images/111-sm.jpg" alt="cool pic">
+            <img src="images/222-sm.jpg" alt="cool pic">
             <img src="images/norris-sm.jpg" alt="cool pic">
-            <img src="images/111.jpg" alt="cool pic">
-            <img src="images/222.jpg" alt="cool pic">
+            <img src="images/111-sm.jpg" alt="cool pic">
+            <img src="images/222-sm.jpg" alt="cool pic">
         </section>
     </main>
+
+    <dialog>
+        <img>
+        <button class="close-viewer">X</button>
+    </dialog>
 
     <footer>
         <p>I am a footer.</p>

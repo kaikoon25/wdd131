@@ -35,7 +35,6 @@ nav {
 nav a {
     padding: 20px;
     color: white;
-    display: none;
 }
 nav a:hover {
     text-decoration: none;
@@ -81,11 +80,71 @@ img {
     margin-right: auto;
 }
 
+/* Adding all CSS for week 4 below here. */
+.hide {
+    display: none;
+}
+.change .bar1 {
+  transform: translate(0, 9px) rotate(-45deg);
+}
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -9px) rotate(45deg);
+}
+nav a {
+    display: block;
+    text-align: center;
+    padding: 12px;
+}
+.bar1, .bar2, .bar3 {
+    transition: 0.5s;
+}
+
+dialog img {
+    width: 90%;
+    height: 60%;
+    display: block;
+    margin: 20vh auto;
+    padding: 0%;
+}
+dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.75);
+}
+.close-viewer {
+    position: absolute;
+    top: 16%;
+    right: 2%;
+    padding: 6px 6px;
+    font-size: 1.2em;
+}
+
 
 /* I did 750 and 1110 px due to the nice right side padding being cut off between 700 and 750px and 1000 and 1110px. */
 @media screen and (min-width: 750px) {
     section {
         grid-template-columns: 1fr 1fr;
+    }
+    dialog img {
+    width: 90%;
+    height: 70%;
+    margin: 15vh auto;
+    }
+    .close-viewer {
+        /* Come back to below */
+        top: 10%;
+        right: 4%;
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    section {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    .hide {
+    display: block;
     }
     .menu-btn {
         display: none;
@@ -96,10 +155,23 @@ img {
     nav {
         text-align: center;
     }
-}
-
-@media screen and (min-width: 1110px) {
-    section {
-            grid-template-columns: 1fr 1fr 1fr;
-        }
+    dialog img {
+    width: 50%;
+    height: 75%;
+    margin: 15vh auto;
+    }
+    .close-viewer {
+        position: absolute;
+        /* Come back to below */
+        top: 12%;
+        right: 23%;
+        padding: 6px 6px;
+    }
+    .viewer {
+        margin: 50px;
+        padding: 50px;
+    }
+    .viewer img {
+        max-width: 800px;
+    }
     }
