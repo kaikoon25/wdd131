@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Reviews</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="movies.css">
+</head>
+<body>
+        
+    <header>
+        <h1>Flick Picks</h1>
+        <nav aria-label="main menu">
+        <!-- The screen reader was unclear about the nav being a main menu, despite nav being a semantic element. This happens sometimes. -->
+        <ul class="main-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+    <!-- role="main" helped the screen reader know it was at the main part of the page -->
+    <section id="movie-list" aria-label="Movie Reviews">
+    <!-- Screen reader says "movie reviews" which helps blind people know the website (this section) is about movie reviews. -->
+        <article class="movie">
+            <h2>Spider-Man: Into the Spider-Verse</h2>
+            <img src="https://wddbyui.github.io/wdd131/images/spiderman.png" alt="Miles Morales swinging through the city">
+            <!-- Descriptive alts for images helped. -->
+            <p><strong>Release Date:</strong> Dec 14, 2018</p>
+            <p><strong>Recommended Age:</strong> 10+</p>
+            <p><strong>Genre:</strong> Action/Adventure</p>
+            <p><strong>Rating:</strong> <span aria-label="5 out of 5 stars" role="img">⭐⭐⭐⭐⭐</span></p>
+            <!-- Screen reader described the star emojis instead of simply 5 out of 5 stars or what not. Added aria label and role image so it dosent say the label and describes the emojis still. -->
+            <p id='desc'>Miles Morales becomes the Spider-Man of his reality and crosses paths with others from the multiverse.</p>
+        </article>
+        <article class="movie">
+            <h2>The Other Side of Heaven</h2>
+            <img src="https://wddbyui.github.io/wdd131/images/heaven.png" alt="A young couple and missionaries in a row boat on the ocean">
+            <p><strong>Release Date:</strong> December 14, 2001</p>
+            <p><strong>Recommended Age:</strong> 10+</p>
+            <p><strong>Genre:</strong> Drama/Religious</p>
+            <p><strong>Rating:</strong> <span aria-label="4 out of 5 stars." role="img">⭐⭐⭐⭐</span></p>
+            <p id='desc'>Based on the true story of Elder John H. Groberg, a missionary in Tonga in the 1950s, this film tells a powerful story of faith, hardship, and miracles.</p>
+        </article>
+    </section>
+    </main>
+
+    <footer>
+    <p>&copy; Flick Picks</p>
+    </footer>
+
+</body>
+</html>
