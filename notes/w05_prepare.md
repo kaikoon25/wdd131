@@ -40,5 +40,8 @@ Set of guidelines are developed by WCAG
     - aria-live     Declares a region of the page as dynamic/live
     - aria-describedby Points to text that describes an element.
 
-------
+    - aria-labelledby Uses another elements text as a label
+    - aria-controls Points to the element being controlled
+    - aria-selected Indicates selection in a list
+    - aria-disabled Marks element as inactive or unavailable
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Biuld a Blog assignments.">
+    <meta name="author" content="Joyce Koon">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Kids Read For Fun</h1>
+        <nav id="main-nav" aria-label="main menu">
+            <a href="#">About</a>
+            <a href="#">Archive</a>
+            <a href="#">Search</a>
+        </nav>
+    </header>
+
+    <div id="extra-line"></div>
+    <!-- I noticed there is an extra line below the nav in the mobile version. I plan to hide this when the media screen gets larger. Only visual. -->
+
+    <main id="main-content" role="main">
+        <section aria-label="Book Reviews.">
+        <!-- In case we add more books, I am going to make the article/section inside of this parent section, like the movie reviews site. -->
+
+            <article class="book-section">
+                <h2>Septimus Heap Book One: Magyk</h2>
+                <img src="images/Magkycover2.jpg" alt="The cover of the book with the title Magyk and author Angie Sage.">
+                <!-- <div id="middle-line"></div>
+                This will be the line between the two sections on larger monitors. Only visual. -->
+                <div class="information">
+                    <p><em>July 5, 2022</em></p>
+                    <p>Ages 10-14</p>
+                    <p>Fantasy</p>
+                    <p><span aria-label="4 out of 5 stars" role="img">⭐⭐⭐⭐</span></p>
+                </div>
+                <p class="decsription">If you enjoy stories about seventh sons of seventh sons and magyk this is the book for you.</p>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Jane Doe</p>
+    </footer>
+
+</body>
+</html>

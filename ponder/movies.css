@@ -64,7 +64,7 @@ header, footer {
     .movie img {
         grid-row: 1/6;
         /* From the top of row 1 to the bottom of row 6. */
-        grid-template-columns: 1/2;
+        grid-column: 1/2;
         /* From the start of colum 1 to the start of column 2, so just in column 1. */
     }
 }
