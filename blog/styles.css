@@ -81,6 +81,7 @@ footer {
         grid-column: 1/2;
         border-right: 1px solid #b58321;
         padding-right: 30px;
+        text-align: right;
     }
     .book-section .description {
         grid-row: 3/4;
