@@ -1,18 +1,10 @@
-// Character card object will have: 
-    // name
-    // class
-    // level
-    // health
-    // image
-    // methods: attacked and level up
-
 // I named this 'dragonCard' instead of just 'card in the case in the future where we add more cards
 const dragonCard = {
     name: 'Alpine Dragon',
     class: 'Snow World Boss',
     level: 15,
     health: 200,
-    image: 'images/dragon-card.png',
+    image: 'images/dragon-card.webp',
     attacked: function () {
         // subtract 20 from hp
         // if hp is less than or equal to 0, output.textContent died
