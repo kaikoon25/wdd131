@@ -1,0 +1,64 @@
+/* Mobile first */
+* {
+box-sizing: border-box;
+}
+
+body {
+font-size: 20px;
+max-width: 1280px;
+margin: auto;
+padding: 1em;
+}
+
+img {
+max-width: 100%;
+}
+
+.main-nav {
+list-style-type: none;
+display: flex;
+gap: 1em;
+flex-direction: column;
+}
+
+.media-card {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    /* Again, mobile first */
+}
+
+hr{
+margin-top: 50px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.gallery > * {
+    /* Every child of .gallery */
+    flex: 1 1 460px;
+    /* Defaults are zero. 1 alows it to take extra space, 1 alows it to shrink */
+}
+
+
+@media screen and (min-width: 550px) {
+    .main-nav {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .media-card {
+        flex-direction: row;
+    }
+    .media-card-image {
+        flex: 0 1 250px;
+    }
+    .media-card-content {
+        flex: 0 1 60ch;
+        /* ch? */
+    }
+}
