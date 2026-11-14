@@ -10,59 +10,77 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Recipe Book">
     <meta property="og:description" content="Common recipes.">
-    <meta property="og:url" content="Your URL">
-    <meta property="og:image" content="social-preview-image.png">
+    <meta property="og:url" content="https://kaikoon25.github.io/wdd131/recipes/index.html">
+    <meta property="og:image" content="https://kaikoon25.github.io/wdd131/recipes/images/social-preview.png">
 
     <!-- X Card -->
     <meta name="twitter:card" content="Social Preview Image">
     <meta name="twitter:title" content="Recipe Book">
     <meta name="twitter:description" content="Common recipes.">
-    <meta name="twitter:image" content="social-preview-image.png">
+    <meta name="twitter:image" content="https://kaikoon25.github.io/wdd131/recipes/images/social-preview.png">
 
     <!-- One favicon (ICO works everywhere) -->
     <link rel="icon" href="favicon.ico">
 
     <!-- One Apple Touch Icon (iOS home screen) -->
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="https://kaikoon25.github.io/wdd131/recipes/images/apple-touch-icon.png">
                 
     <title>Recipe Book</title>
     
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <!-- Note for later: I need to optimize my apple touch and social preview images? Maybe. Might now come up with lighthouse. -->
 </head>
 <body>
     <header>
-
+        <div class="title">
+            <img id="book" src="images/recipe-book.png" alt="Picture of a recipe book.">
+            <h1>Recipe Book</h1>
+        </div>
+        <div class="search-bar" aria-label="Search Bar.">
+            <p>Find a recipe</p>
+            <img src="images/search.svg" alt="search" aria-hidden="true">
+        </div>
+        <!-- Later, if promted, I will change this code to either make the whole thing a button if possible, or make the search image a button. -->
     </header>
 
-    <main>
+    <hr>
 
-        <!-- 
-        <span
-        class="rating"
-        role="img"
-        aria-label="Rating: 4 out of 5 stars"
-        >
-        <span aria-hidden="true" class="icon-star">⭐</span>
-        <span aria-hidden="true" class="icon-star">⭐</span>
-        <span aria-hidden="true" class="icon-star">⭐</span>
-        <span aria-hidden="true" class="icon-star">⭐</span>
-        <span aria-hidden="true" class="icon-star-empty">☆</span>
-        </span>
-        -->
+    <main>
+        <section class="recipe-card">
+            <img class="recipe-img" src="images/apple-crisp.jpg" alt="An apple crisp with ice cream.">
+
+            <div class="recipe-details">
+            <button class="food-category-button">dessert</button>
+            <div class="grouped">
+                <h2>Apple Crisp</h2>
+                <span
+                    class="rating"
+                    role="img"
+                    aria-label="Rating: 4 out of 5 stars"
+                    >
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </span>
+            </div>
+            <p hidden>This apple crisp is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
+            </div>
+
+        </section>
     </main>
 
     <footer>
         <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
         
-        <!-- Might need to not be in footer??? In a "comment"? -->
         <div class="social">
         <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
         <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
         <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
         <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
-        </div>                  
-                
+        </div>
     </footer>
 </body>
 </html>

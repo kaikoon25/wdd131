@@ -1,10 +1,125 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
-h1 {
+h1, h2 {
     font-family: "Amatic SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    /* Bold */
     /* font-weight: 700;
     font-style: normal; */
+}
+
+body {
+    padding: 15px;
+}
+
+
+
+.title {
+    display: flex;
+    margin-bottom: 0.4em;
+    justify-content: center;
+    font-size: 1.6em;
+}
+
+#book {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.search-bar {
+    display: flex;
+    flex: 0 1 100px;
+    padding: 6px 10px;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+    /* max-height: 2em; */
+}
+
+.search-bar img {
+    max-width: 40px;
+    max-height: 40px;
+    padding-left: 10px;
+    border-left: 1px solid #000000;
+}
+
+
+
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    align-items: flex-start;
+
+    padding: 1em;
+    margin: 1em auto;
+    border: 2px solid #000000;
+    border-radius: 15px;
+}
+
+.recipe-img {
+    max-width: 100%;
+    max-height: 100%;
+    padding-bottom: 0.5em;
+}
+
+.recipe-card h2 {
+    margin: 0;
+    color: rgb(0, 86, 192);
+    font-size: 2em;
+}
+
+.food-category-button {
+    margin-bottom: 1.5em;
+}
+
+
+
+footer {
+    margin: 2em auto auto auto;
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.social {
+    order: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.social img {
+    width: 32px;
+}
+
+@media screen and (min-width: 550px) {
+    .recipe-card {
+        flex-flow: row wrap;
+        gap: 1em;
+        padding: 1.2em;
+    }
+    .recipe-card p {
+        display: revert;
+        flex-direction: row;
+        gap: 1em;
+    }
+    .recipe-img {
+        height: 100%;
+        max-width: 50%;
+    }
+    .recipe-details {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: flex-start;
+    }
+
+    footer {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
 }
