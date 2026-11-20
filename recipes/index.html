@@ -32,16 +32,24 @@
     <!-- Note for later: I need to optimize my apple touch and social preview images? Maybe. Might now come up with lighthouse. -->
 </head>
 <body>
+
     <header>
         <div class="title">
             <img id="book" src="images/recipe-book.png" alt="Picture of a recipe book.">
             <h1>Recipe Book</h1>
         </div>
-        <div class="search-bar" aria-label="Search Bar.">
-            <p>Find a recipe</p>
-            <img src="images/search.svg" alt="search" aria-hidden="true">
-        </div>
-        <!-- Later, if promted, I will change this code to either make the whole thing a button if possible, or make the search image a button. -->
+
+        <form class="search-bar" role="search" action="#" method="get">
+            <input 
+                type="search" 
+                name="q" 
+                placeholder="Find a recipe"
+                aria-label="Find a recipe"
+            >
+            <button type="submit" aria-label="Search recipes">
+                <img src="images/search.svg" alt="" aria-hidden="true">
+            </button>
+        </form>
     </header>
 
     <hr>

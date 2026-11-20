@@ -24,25 +24,48 @@ body {
     max-height: 100px;
 }
 
+
 .search-bar {
     display: flex;
-    flex: 0 1 100px;
+    flex: 0 1 100%;
     padding: 6px 10px;
     border: 2px solid #000000;
     border-radius: 15px;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1em;
-    /* max-height: 2em; */
 }
 
-.search-bar img {
+.search-bar input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    font-family: inherit;
+    background: transparent;
+}
+
+.search-bar input::placeholder {
+    color: #000000;
+    opacity: 1;
+}
+
+.search-bar button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    border-left: 1px solid #000000;
+    padding: 0 0 0 10px;
+    cursor: pointer;
+}
+
+.search-bar button img {
     max-width: 40px;
     max-height: 40px;
-    padding-left: 10px;
-    border-left: 1px solid #000000;
 }
-
 
 
 .recipe-card {
