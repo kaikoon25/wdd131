@@ -29,7 +29,8 @@
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <!-- Note for later: I need to optimize my apple touch and social preview images? Maybe. Might now come up with lighthouse. -->
+    <!-- Note for later: I need to optimize my apple touch and social preview images? Maybe. Might not come up with lighthouse. -->
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -42,7 +43,8 @@
         <form class="search-bar" role="search" action="#" method="get">
             <input 
                 type="search" 
-                name="q" 
+                name="search"
+                id="search"
                 placeholder="Find a recipe"
                 aria-label="Find a recipe"
             >
@@ -55,7 +57,8 @@
     <hr>
 
     <main>
-        <section class="recipe-card">
+        <div id="recipe-cards">
+        <!-- <section class="recipe-card">
             <img class="recipe-img" src="images/apple-crisp.jpg" alt="An apple crisp with ice cream.">
 
             <div class="recipe-details">
@@ -76,8 +79,8 @@
             </div>
             <p hidden>This apple crisp is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
             </div>
-
-        </section>
+        </section> -->
+        </div>
     </main>
 
     <footer>
